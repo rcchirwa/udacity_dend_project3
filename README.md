@@ -129,6 +129,9 @@ DistALL was chosen because of the size of songplays was since it is small copyin
 
 If the data scales and this is no longer a suitable strategy, we can revisit ing the future at that point.
 
+**Joining staging_events_table and staging_songs_table**
+Two keys were used to join the events and songs staging tables. This took match (song, artist) in events to (title, artist_name) to ensure unique artist and song combinations because song and artist names are not unique. Joining by song_id or artist_id would have been the optimal solution.
+
 ### users
 
 The sortkey are the user_id
