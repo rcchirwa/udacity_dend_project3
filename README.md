@@ -108,19 +108,6 @@ public|songplays|333
 public|users|105
 
 
-
-### staging_events_table
-
-The distibution key selected was artist because this is going to used as a joining key for loading data into the songplays fact table.
-
-The sort key was choosen as artist and song because these are used join keys. 
-
-### staging_songs_table
-
-The distibution key selected was artist_name because this is going to used as a joining key for loading data into the songplays fact table.
-
-The sort key was choosen as artist_name and title because these are used join keys. 
-
 ### songplays
 
 I used starttime as a sort key because I anticipate using alot of time-based analysis to measure Growth Accounting (Daily, weekly and Monthy Active Users) as well as time spent on the platform.
@@ -136,13 +123,19 @@ Two keys were used to join the events and songs staging tables. This took match 
 
 The sortkey are the user_id
 
+user_id was also used as a primary key
+
 Dist all has been chosen because of the size of this table 
 
 ### artists
 
 The sortkey is artist_id because it could be used in joins with songplays and songs tables
 
+artist_id was used for primary key.
+
 ### songs
+
+song_id was used as a primary key as well.
 
 The sortkey was selected as song_id because it is used to join with the songplays and artists tables
 
@@ -151,5 +144,7 @@ The distkey was selected as artist_id because arts can have multiple songs and t
 ### time
 
 The sort key was selected as start_time due to it being used to join with the songplays fact table
+
+start_time was used as primary key
 
 
